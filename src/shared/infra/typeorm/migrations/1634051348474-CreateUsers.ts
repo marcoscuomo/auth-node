@@ -27,7 +27,8 @@ export class CreateUsers1634051348474 implements MigrationInterface {
               },
               {
                 name: "USER_TOKEN",
-                type: "varchar"
+                type: "varchar",
+                default: null
               },
               {
                 name: "USER_ACTIVE",
@@ -46,7 +47,8 @@ export class CreateUsers1634051348474 implements MigrationInterface {
               },
               {
                 name: "USER_UPDATED_AT",
-                type: "timestamp"
+                type: "timestamp",
+                default: null
               }
             ]
           }

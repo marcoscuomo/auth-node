@@ -18,6 +18,9 @@ class User {
   @Column({ name: "USER_TOKEN" })
   refreshToken: string;
 
+  @Column({ name: "USER_TOKEN_EXPIRES" })
+  expireDateToken: Date;
+
   @Column({ name: "USER_ACTIVE" })
   active: boolean;
 

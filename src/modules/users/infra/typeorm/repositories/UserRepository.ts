@@ -25,6 +25,14 @@ class UserRepository implements IUserRepository {
     return this.repository.findOne({id});
   }
 
+  async updateToken(refreshToken: string, expireDate: Date, userId: string): Promise<void> {
+    const user = await this.findById(userId);
+
+    user.refreshToken = refreshToken;
+    user.expireDateToken = expireDate;
+
+    await this.repository.save(user);
+  }
   
 }
 
