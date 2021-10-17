@@ -35,7 +35,7 @@ class AuthenticateUseCase {
   ){}
   
   async execute({email, password}: IRequest) {
-    const user = this.userRepository.findByEmail(email);
+    const user = await this.userRepository.findByEmail(email);
 
     if(!user) {
       throw new AppError(messages.errors.emailOrPasswordDoesNotExist, 401);
