@@ -6,7 +6,7 @@
 - Typescript
 - Bcryptjs
 - Tsyringe
-- Typeorm
+- Type ORM
 - UUID
 
 ### `yarn start`
